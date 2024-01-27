@@ -29,4 +29,4 @@ HBNB (HomeAway, Airbnb) Project is a web application for managing and booking re
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/hbnb-project.git
+   git clone https://github.com/your-username/HBNB-HOTELS-SYSTEM.git
