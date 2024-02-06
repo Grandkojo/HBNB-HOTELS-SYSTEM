@@ -194,3 +194,78 @@
         })
     }
 </script>
+
+<script>
+    let emailButton = document.getElementById('forgotpassword_submit');
+
+    if (emailButton) {
+        emailButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            swal("Email sent!", "Check your email for further instructions", "success")
+            .then((result) => {
+                if (result) {
+                    let form = document.getElementById('forgotpasswordform');
+                    
+                    if (form) {
+                        form.submit();
+                        // location.reload();
+                    } else {
+                        console.error('Form not found.');
+                    }
+                }
+            });
+        });
+    }
+</script>
+
+<script>
+    function showResult(str) {
+  if (str.length==0) {
+    document.getElementById("search_results").innerHTML="";
+    document.getElementById("search_results").style.border="0px";
+    return;
+  }
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+        let $search_results = document.getElementById("search_results");
+      $search_results.innerHTML=this.responseText;
+      $search_results.style.border="1px solid #A5ACB2";
+      $search_results.style.boxShadow="0px 0px 10px 0px #A5ACB2";
+      $search_results.style.borderRadius="20px";
+      $search_results.style.width="20%";
+      $search_results.style.textAlign="center";
+      $search_results.style.position="fixed";
+      $search_results.style.backgroundColor="white";
+    }
+  }
+  xmlhttp.open("GET","search.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+
+<script>
+    function handleLike(like_icon_id, modal_id) {
+        if (<?php echo isset($_SESSION['email']) ? 'true' : 'false'; ?>) {;
+            let like = document.getElementById(like_icon_id);
+            if (like) {
+                if (like.classList.contains("fa-heart-o")) {
+                like.classList.remove("fa-heart-o");
+                like.classList.add('fa-heart');
+                } else {
+                    like.classList.remove("fa-heart");
+                    like.classList.add('fa-heart-o');
+                }
+            }
+        } else {
+            openModal(modal_id)
+        }
+    }
+
+    function openModal(modal_id) {
+        let myModal = new bootstrap.Modal(document.getElementById(modal_id));
+        myModal.show();
+    }
+</script>
+
+</script>

@@ -40,11 +40,12 @@ $residence = [];
                 <!-- <div class="container_search bg-light border border-2 border-secondary"> -->
                 <form action="index.php" method="post" autocomplete="off" id="search_form">
                     <div class="search_container">
-                        <input id="search_input" name="search" type="text" placeholder="Residences..." autocomplete="off" class="text-center" onfocus="expandInput()" onblur="collapseInput()" style="font-size: small;">
+                        <input id="search_input" name="search" type="text" placeholder="Residences..." autocomplete="off" class="text-center" onkeyup="showResult(this.value)" onfocus="expandInput()" onblur="collapseInput()" style="font-size: small;">
                         <button id="search_button" onfocus="expandInput()" onblur="collapseInput()">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
+                    <div id="search_results"></div>
                 </form>
                 <!-- </div> -->
                 <!-- <form action="index.php" method="post" autocomplete="off" class="search-container">
@@ -72,7 +73,7 @@ $residence = [];
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="index_for_admin.php"><small>Login - Admin</small></a></li>
+                            <li><a class="dropdown-item" href="index_for_admin.php" target="_blank"><small>Login - Admin</small></a></li>
                         </ul>
                     </div>
                 </div>
@@ -155,14 +156,30 @@ $residence = [];
 
                 <div class="col-md-4 col-12 col-sm-6 col-lg-2 d-flex justify-content-center ps-3">
                     <!-- <div class="col-md-3"> -->
-                    <div class="image-container ms-1">
+                    <div class="image-container ms-1 position-relative">
+                        <!-- like -->
+                        <i class="fa fa-heart-o position-absolute top-0 end-0 mt-3 me-3" onclick="handleLike('like-<?php echo $room['ID']?>', 'modalId')" aria-hidden="true" style="cursor: pointer; color:palevioletred;" id="like-<?php echo $room['ID'] ?>"></i>
+                        <!-- end like -->
                         <img class="modals shadow" href="#" data-bs-toggle="modal" data-bs-target="#myModal<?php echo $room['ID'] ?>" src="<?php echo $room['PICTURE'] ?>" alt="1">
-                        <a class="modals" href="#" data-bs-toggle="modal" data-bs-target="#myModal<?php echo $room['ID'] ?>"><span>
-                                <strong>
-                                    <p class="ms-3" style="font-size: larger; font-family:'Times New Roman', Times, serif"><?php echo $room['LOCATION'] ?>
-                                </strong><br>$<?php echo $room['PRICE'] ?> per night</p>
-                            </span>
-                        </a>
+                        <br>
+                        <!-- change -->
+                        <div class="row">
+                            <div class="col-8">
+                                <a class="modals" href="#" data-bs-toggle="modal" data-bs-target="#myModal<?php echo $room['ID'] ?>"><span>
+                                        <strong style="font-size: medium;">
+                                            <p class="ms-3" style="font-size: medium; font-family:'Times New Roman', Times, serif"><?php echo $room['LOCATION'] ?>
+                                        </strong><br>$<?php echo $room['PRICE'] ?> per night</p>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-4" style="font-size: small;">
+                                <i class="fa fa-star d-inline" aria-hidden="true">
+                                    <p class="d-inline"> 4.45</p>
+                                </i>
+
+                            </div>
+                        </div>
+                        <!-- end change -->
                     </div>
                 </div>
 
@@ -242,14 +259,30 @@ $residence = [];
             <?php foreach ($residence as $room) { ?>
                 <div class="col-md-2">
                     <!-- <div class="col-md-3"> -->
-                    <div class="image-container ms-1">
+                    <div class="image-container ms-1 position-relative">
                         <img class="modals shadow" href="#" data-bs-toggle="modal" data-bs-target="#myModal<?php echo $room['ID'] ?>" src="<?php echo $room['PICTURE'] ?>" alt="1">
-                        <a class="modals" href="#" data-bs-toggle="modal" data-bs-target="#myModal<?php echo $room['ID'] ?>"><span>
-                                <strong>
-                                    <p class="ms-3" style="font-size: larger; font-family:'Times New Roman', Times, serif"><?php echo $room['LOCATION'] ?>
-                                </strong><br>$<?php echo $room['PRICE'] ?> per night</p>
-                            </span>
-                        </a>
+                        <!-- like -->
+                        <i class="fa fa-heart-o position-absolute top-0 end-0 mt-3 me-3" onclick="handleLike('like-<?php echo $room['ID']?>', 'modalId')" aria-hidden="true" style="cursor: pointer; color: palevioletred" id="like-<?php echo $room['ID'] ?>"></i>
+                        <!-- end like -->
+                        <br>
+                        <!-- change -->
+                        <div class="row">
+                            <div class="col-8">
+                                <a class="modals" href="#" data-bs-toggle="modal" data-bs-target="#myModal<?php echo $room['ID'] ?>"><span>
+                                        <strong style="font-size: medium;">
+                                            <p class="ms-3" style="font-size: medium; font-family:'Times New Roman', Times, serif"><?php echo $room['LOCATION'] ?>
+                                        </strong><br>$<?php echo $room['PRICE'] ?> per night</p>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-4" style="font-size: small;">
+                                <i class="fa fa-star d-inline" aria-hidden="true">
+                                    <p class="d-inline"> 4.45</p>
+                                </i>
+
+                            </div>
+                        </div>
+                        <!-- end change -->
                     </div>
                 </div>
 
@@ -644,7 +677,7 @@ $residence = [];
         </div>
     </form>
 
-    
+
     <?php
     include "scripts/index_js.php";
     // session_unset();
