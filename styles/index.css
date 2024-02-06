@@ -1,0 +1,146 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.image-curved{
+    border-radius: 20px;
+}
+
+.image-container{
+    align-content: center;
+    display: inline-block;
+}
+
+.image-container img{
+    object-fit: contain;
+    height: 300px; 
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    color:#cfc2c2e4
+    
+}
+
+.image-container span:hover{
+    color:burlywood;
+}
+
+.image-container.shadow{
+    box-shadow:  10px 10px #888888;
+}
+
+.image-container img {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.9);
+}
+.image-container img:hover{
+    transform: scale(0.95);
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+a.modals {
+    text-decoration: none;
+    color: black;
+}
+.custom-modal .modal-content{
+    background-color: whitesmoke;
+    color: black;
+}
+.custom-modal .modal-header {
+    border-bottom: none;
+}
+.custom-modal .modal-footer {
+    border-top: none;
+}
+.luxury {
+    position: relative;
+    right: 100px;
+    top: 1px;
+}
+
+.password-input {
+    position: relative;
+    padding-right: 30px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search_container {
+    background: white;
+    padding: 0;
+    border: 2px solid grey;
+    border-radius: 50px;
+}
+
+.search_container input {
+    position: relative;
+    outline: none;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    transition: 0.4s;
+    width: 0px;
+}
+
+.search_container button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: red;
+    border: 1px solid grey;
+    color: white;
+}
+
+.search_container.open input {
+    width: 150px;
+}
+
+@media (min-width: 768px) {
+    .search_container.open input {
+        width: 300px;
+    }
+}
+
+@media (min-width: 768px), (min-width: 820px), (min-width: 1024px) {
+    .image-container img{
+        object-fit: contain;
+        height: 200px; 
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        color:#cfc2c2e4
+        
+}
+}
+@media (min-width: 1024px) {
+    .image-container img{
+        object-fit: contain;
+        height: 250px; 
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+        color:#cfc2c2e4
+        
+}
+}
+@media (max-width: 768px){
+    .image-container img{
+        object-fit: contain;
+        height: 380px;
+        width: 380px;
+        display: block;
+        margin: 0 auto;
+        color:#cfc2c2e4
+    }
+}
+
+
+
