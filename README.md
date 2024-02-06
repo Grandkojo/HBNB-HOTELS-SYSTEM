@@ -97,7 +97,7 @@ Please follow the [contribution guidelines](CONTRIBUTING.md)
 [Lynn Kamau](https://github.com/LynnKamau)
 
 ## Copyright
-The logo ![HBNB Logo](hbnb_logo.png){:width "30px" height "30px"} was from ©[ALX](https://www.alxafrica.com/)<br>
+The logo <img src="hbnb_logo.png" alt="HBNB logo" width="20" height="20"> was from ©[ALX](https://www.alxafrica.com/)<br>
 All credits due 😊.
 
 ## License
