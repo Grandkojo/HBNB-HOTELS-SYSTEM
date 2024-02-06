@@ -49,6 +49,7 @@ HBNB (HomeAway, Airbnb) Project is a web application for managing and booking re
 
 4. **Important:**
     - The landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM```
+    - The admin landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM``
 
 You're good to go 🎉
 
@@ -92,12 +93,12 @@ Contributions are welcome 😊!
 Please follow the [contribution guidelines](CONTRIBUTING.md)
 
 ## Contributors
-[Essien Ernest Kojo](https://github.com/Grandkojo)
+[Essien Ernest Kojo](https://github.com/Grandkojo)<br>
 [Lynn Kamau](https://github.com/LynnKamau)
 
 ## Copyright
-The logo ![HBNB Logo](hbnb_logo.png) was from ©[ALX](https://www.alxafrica.com/)
-All credits due 😊
+The logo ![HBNB Logo](hbnb_logo.png) was from ©[ALX](https://www.alxafrica.com/)<br>
+All credits due 😊.
 
 ## License
 
