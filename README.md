@@ -1,6 +1,6 @@
 # HBNB Project
 
-![HBNB Logo](hbnb_logo.png)
+![HBNB Logo](readme_img/hbnb_logo.png)
 
 ## Table of Contents
 
@@ -12,6 +12,7 @@
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
+- [Bugs](#bugs)
 - [Copyright](#copyright)
 - [License](#license)
 
@@ -48,8 +49,10 @@ HBNB (HomeAway, Airbnb) Project is a web application for managing and booking re
     cd admin/config.php
 
 4. **Important:**
-    - The landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM```
-    - The admin landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM``
+    - The landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM/index.php```
+    ![User page](readme_img/user%20landing%20page.png)
+    - The admin landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM/admin/admin_page.php```
+    ![User page](readme_img/user%20landing%20page.png)
 
 You're good to go 🎉
 
