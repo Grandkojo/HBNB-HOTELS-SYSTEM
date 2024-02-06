@@ -50,9 +50,9 @@ HBNB (HomeAway, Airbnb) Project is a web application for managing and booking re
 
 4. **Important:**
     - The landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM/index.php```
-    ![User page](readme_img/user%20landing%20page.png)
+    ![User landing page](readme_img/user%20landing%20page.png)
     - The admin landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM/admin/admin_page.php```
-    ![Admin page](readme_img/user%20landing%20page.png)
+    ![Admin landing page](readme_img/user%20landing%20page.png)
 
 You're good to go 🎉
 

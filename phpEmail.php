@@ -1,7 +1,7 @@
 <?php
     include "admin/config.php";
     $residence_name = $_GET['residence_name'];
-    //CHECK FOR DUPLICATES
+    //CHECK FOR DUPLICATE
     $check = "SELECT EMAIL FROM booking_details WHERE EMAIL = :email";
     $stmt0 = $conn->prepare($check);
     $stmt0->bindParam(':email', $email);
