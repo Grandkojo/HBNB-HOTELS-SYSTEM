@@ -11,6 +11,8 @@
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
+- [Copyright](#copyright)
 - [License](#license)
 
 ## Introduction
@@ -88,6 +90,14 @@ HBNB-HOTELS-MANAGEMENT-SYSTEM/<br>
 
 Contributions are welcome 😊! 
 Please follow the [contribution guidelines](CONTRIBUTING.md)
+
+## Contributors
+[Essien Ernest Kojo](https://github.com/Grandkojo)
+[Lynn Kamau](https://github.com/LynnKamau)
+
+## Copyright
+The logo ![HBNB Logo](hbnb_logo.png) was from ©[ALX](https://www.alxafrica.com/)
+All credits due 😊
 
 ## License
 
