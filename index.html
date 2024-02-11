@@ -8,26 +8,43 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="icon" href="images/hbnb.png">
     <link rel="stylesheet" href="styles/main.css">
     <title>HBNB</title>
 </head>
 <body>
-    <header class="header-container sticky-top">
-        <div class="col-md-2">
+    <!-- <header class="header-container sticky-top">
+        <div class="col-md-2 col-4 col-sm-4 col-lg-2">
             <img class="header-logo" src="images/hbnb.png" alt="hbnb-logo">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-0 col-sm-0 col-lg-6">
             <h1 class="main-section-title">Welcome to HBNB</h1>
         </div>
-        <div class="col-md-4 text-center sections">
+        <div class="col-md-4 col-8 col-sm-8 col-lg-4 text-center sections">
             <nav>
                 <a href="#features" class="me-4">Features</a>
                 <a href="#about">About</a>
 
             </nav>
         </div>
+    </header> -->
+    <header class="header-container sticky-top">
+        <div class="col-md-2 col-4 col-sm-4 col-lg-2">
+            <img class="header-logo" src="images/hbnb.png" alt="hbnb-logo">
+        </div>
+        <!-- Use Bootstrap classes to control visibility -->
+        <div class="col-md-6 d-md-block d-none col-0 d-sm-block d-none col-lg-6">
+            <h1 class="main-section-title">Welcome to HBNB</h1>
+        </div>
+        <div class="col-md-4 col-8 col-sm-8 col-lg-4 text-center sections">
+            <nav>
+                <a href="#features" class="me-4">Features</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
     </header>
+
     <main class="main-container">
         <section class="main-section">
             <div class="container"> 
@@ -52,24 +69,86 @@
         </section>
         <!-- Features -->
         <section id="features">
-            <h2>Key Features</h2>
+            <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
+            <h2 class="text-center pt-3">Features</h2>
+            <div class="row">
+                <div class="col-6 col-12 col-sm-12 col-lg-6 text-center mt-4">
+                    <img class=smallscreen src="images/sm-lp-signup.png" alt="small">
+                    <!-- <img src="images/lp-signup.png" alt="signup" style="overflow: hidden; background-size: contain; background-repeat: no-repeat; height: 400px; width: autopx;"> -->
+                </div>
+                <div class="col-6 col-12 col-sm-12 col-lg-6 feature-text-1">
+                    <div class="container-section">
+                        <h2>Sign up and Join the community.</h2>
+                        <br>    
+                        <div class="text">
+                            <p>Once you sign up, you become an HBNBer, get access to all available apartments where you could book at the comfort of your home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6 col-12 col-sm-12 col-lg-6 feature-text-1">
+                    <div class="container-section">
+                        <h2>Don't worry looking for specific residences.</h2>
+                        <br>    
+                        <div class="text">
+                            <p>Get available apartments near you just by entering your location in the search bar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-12 col-sm-12 col-lg-6 text-center text-center mt-4">
+                    <img class=smallscreen src="images/sm-lp-ajax_search.png" alt="signup" style="overflow: hidden; background-size: contain; background-repeat: no-repeat; height: 400px; width: autopx;">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6 col-12 col-sm-12 col-lg-6 text-center text-center mt-4">
+                    <img class=smallscreen src="images/sm-lp-booking.png" alt="signup" style="overflow: hidden; background-size: contain; background-repeat: no-repeat; height: 400px; width: autopx;">
+                </div>
+                <div class="col-6 col-12 col-sm-12 col-lg-6 feature-text-1">
+                    <div class="container-section">
+                        <h2>A well organized booking portal.</h2>
+                        <br>    
+                        <div class="text">
+                            <p>Fill in the required details with simple, easy steps and book your stay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
         </section>
-        <section class="about">
-            <div height: 70vh>
-                <h1>Hello</h1>
-                <h1>Hello</h1>
-                <h1>Hello</h1>
-                <h1>Hello</h1>
-                <h1>Hello</h1>
-
+        <section class="about" id="about">
+            <h2 class="text-center mt-3">About Us</h2>
+            <div class="container text-center" style="max-width: 750px; word-wrap: break-word;">
+                Project HBNB was just a way to visualize how booking residences could be made easier for tourists. <br> It is a portfolio project for the Holberton School. <br>
+            </div>
+            <br>
+            <h2 class="text-center">Team Members</h2>
+                <div class="container text-center" style="max-width: 750px; word-wrap: break-word;">
+                    <p>Essien Ernest Kojo | 
+                        <a href="https://github.com/Grandkojo" target="_blank"><i class="fa fa-github"></i></a> |
+                        <a href="https://twitter.com/grandkojo" target="_blank"><i class="fa fa-twitter"></i></a> |
+                        <a href="https://www.linkedin.com/in/ernest-essien-kojo/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </p>
+                    <p>Kamau Lynn |
+                        <a href="https://github.com/LynnKamau" target="_blank"><i class="fa fa-github"></i></a> |
+                        <a href="https://twitter.com/LynnKamau" target="_blank"><i class="fa fa-twitter"></i></a> |
+                        <a href="https://www.linkedin.com/in/kamau-lynn-6b8b981b0/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </p>
+                </div>  
+            <br>
+            <div class="container text-center" style="max-width: 750px; word-wrap: break-word;">
+                <h2 class="text-center">Github Repository</h2>
+                <p>Access the source code to the project here <a href="https://github.com/Grandkojo/HBNB-HOTELS-SYSTEM" target="_blank"><i class="fa fa-github"></i></a></p>
             </div>
         </section>
     </main>
     <footer class="footer-container">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <p class="footer-text">HBNB &copy; 2021</p>
+                <div class="col-md-12 d-flex justify-content-center align-content-center">
+                    <p class="footer-text mt-2">HBNB &copy; 2024</p>
                 </div>
             </div>
         </div>
