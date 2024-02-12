@@ -78,7 +78,6 @@
         } else {
             validpassword.innerHTML = "<small>Must contain at least one number, one uppercase, a lowercase letter, and at least 8 or more characters</small>";
         }
-
     }
 </script>
 
