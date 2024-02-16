@@ -19,10 +19,8 @@
 ## Introduction
 
 HBNB (HomeAway, Airbnb) Project is a web application for managing and booking rental properties. This project aims to provide a platform where users can explore, list, and book accommodations for short-term stays. <br>
-Check out our landing page <br>
-```bash
-    https://grandkojo.github.io/HBNB-HOTELS-SYSTEM
-```
+- Check out our landing page: ```https://grandkojo.github.io/HBNB-HOTELS-SYSTEM``` <br>
+
 
 ## Features
 
