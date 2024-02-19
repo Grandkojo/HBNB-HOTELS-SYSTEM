@@ -33,9 +33,7 @@
             newInput.name = 'duration';
             newInput.id = 'duration';
             newInput.placeholder = 'Hours (min 10, max 23)';
-            // newInput.onkeyup = durationValidity();
             newInput.required = true;
-            // newInput.value = 10;
 
             let durationsContainer = document.getElementById('durations');
 
@@ -44,7 +42,6 @@
             durationsContainer.appendChild(newInput);
             durationsContainer.onkeyup = durationValidity();
         } else {
-            // Clear the duration input if dates are different
             document.getElementById('durations').innerHTML = '';
         }
     });
@@ -66,8 +63,6 @@
                     let validateHours = document.getElementById('checkHours');
                     alert("Duration must be between 10 and 23");
                     return;
-                    // validateHours.appendChild(message);
-                    // return;
                 } else {
                     document.getElementById('checkHours').innerHTML = "";
                 }
@@ -111,22 +106,12 @@
             alert('Enter your check-out date');
             return;
         }
-        // alert(durationInput.value);
-        // return;
-        // if (validateHours.value < 10 || validateHours.value > 23){
-        //     alert('Enter the hours you wish to stay ( min 10, max 23)');
-        //     return;
-        // }
+        
         if (email.value == ""){
             alert('Enter your email')
             return;
         }
-
-        // alert(validateHours.value);
-        // if (durationInput.value < 10 || durationInput.value > 23) {
-        //     alert("Duration must be between 10 and 23");
-        //     return;
-        // } 
+        
         swal({
             title: "Booking Successful!",
             text: "You will receive a confirmation email shortly...",

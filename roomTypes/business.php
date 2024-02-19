@@ -2,8 +2,6 @@
     <?php
     include "roomTypes/index_business.php";
     include "shared_modal.php";
-    // include "../admin/modals/login.php";
-    // include "../admin/modals/signup.php";
     ?>
     <?php
     foreach ($result as $room) {

@@ -31,11 +31,7 @@
         return result;
     }
 </script>
-<!-- <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script> -->
+
 <script>
     let signupform = document.getElementById("signup");
 </script>
@@ -60,7 +56,6 @@
 
 
         } else {
-            // alert.style.display = "none";
             alert.innerHTML = "";
             formsubmit.submit();
         }
@@ -100,6 +95,7 @@
                     swal("You have been logged out!", {
                         icon: "success",
                     }).then(() => {
+                        sessionStorage.setItem('login', 'false');
                         <?php
                         // session_unset();
                         // session_destroy();
@@ -115,7 +111,6 @@
 </script>
 
 <script>
-    // Function to hide the alert after 2 seconds
     function hideAlert() {
         var alert = document.getElementById('alertbuttonprofile');
         if (alert) {
@@ -123,7 +118,6 @@
         }
     }
 
-    // Show the alert
     setTimeout(hideAlert, 2000);
 </script>
 
@@ -138,7 +132,6 @@
 
             let searchInput = document.getElementById("search_input");
             if (searchInput.value === "") {
-                // alert("Please enter something");
             } else {
                 search_form.submit();
             }
@@ -185,7 +178,6 @@
             swal("Email sent!", "Check your email for further instructions", "success")
             .then((result) => {
             if (result) {
-                // window.location.href = "admin/modals/forgotPassword.php";
                 email.submit();
                 location.reload();
             }
@@ -207,7 +199,6 @@
                     
                     if (form) {
                         form.submit();
-                        // location.reload();
                     } else {
                         console.error('Form not found.');
                     }
