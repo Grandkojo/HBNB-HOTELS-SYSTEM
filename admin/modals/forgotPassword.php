@@ -1,6 +1,7 @@
 <?php
 // Sends an email to the account that requested it to reset their password
 include "../config.php";
+include "../../mailPassword.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["email_login"]) && !empty($_POST["email_login"])) {
         $email = $_POST["email_login"];
@@ -32,7 +33,8 @@ require '../../PHPMailer-master/src/Exception.php';
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'essienernest.kojoowusu@gmail.com';
-        $mail->Password = 'zgra iyns forz abkp';
+        //personal password
+        $mail->Password = $mailPassword;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
         

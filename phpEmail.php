@@ -1,5 +1,6 @@
 <?php
     include "admin/config.php";
+    include "mailPassword.php";
     $residence_name = $_GET['residence_name'];
     //CHECK FOR DUPLICATE
     $check = "SELECT EMAIL FROM booking_details WHERE EMAIL = :email";
@@ -75,7 +76,8 @@
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'essienernest.kojoowusu@gmail.com';
-        $mail->Password = 'zgra iyns forz abkp';
+        //personal password
+        $mail->Password = $mailPassword;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
         
