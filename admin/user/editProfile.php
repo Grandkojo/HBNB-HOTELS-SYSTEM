@@ -4,11 +4,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_FILES["profile_images"]) &&  $_FILES["profile_images"]["error"] === UPLOAD_ERR_OK){
         $baseUrl = "";
-        $uploadDirectory = "C:/xampp/htdocs/HBNB/admin/user/user_profiles/";
+        $uploadDirectory = "C:/xampp/htdocs/HBNB-HOTELS-SYSTEM/admin/user/user_profiles/";
         $uploadFilePath = $uploadDirectory . basename($_FILES["profile_images"]["name"]);
         if (move_uploaded_file($_FILES["profile_images"]["tmp_name"], $uploadFilePath)) {
             // File uploaded successfully.
-            $uploadedFilePath = $baseUrl . str_replace("C:/xampp/htdocs/HBNB/", "", $uploadDirectory . basename($_FILES["profile_images"]["name"]));
+            $uploadedFilePath = $baseUrl . str_replace("C:/xampp/htdocs/HBNB-HOTELS-SYSTEM/", "", $uploadDirectory . basename($_FILES["profile_images"]["name"]));
             $_SESSION["profile_images"] = $uploadedFilePath;
             
             if (isset($_POST["profile_first_name"]) && (!empty($_POST["profile_first_name"]))) {
