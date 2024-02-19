@@ -1,4 +1,5 @@
 <?php
+// Sends an email to the account that requested it to reset their password
 include "../config.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["email_login"]) && !empty($_POST["email_login"])) {
@@ -10,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch(PDO::FETCH_ASSOC);
         $password = $row['PASSWORDS'];
         
-        // exit;
     }
 }
 
@@ -38,7 +38,6 @@ require '../../PHPMailer-master/src/Exception.php';
         
         $mail->setFrom('essienernest.kojoowusu@gmail.com', "HBNB HOTEL");
         $mail->addAddress($email);
-        // $mail->addBCC('owusukojow21@gmail.com', "HBNB HOTEL ADMIN");
 
         $mail->isHTML(true);
         $subject = "HBNB Hotel Password Recovery";

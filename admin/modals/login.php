@@ -4,9 +4,12 @@ unset($_SESSION['firstname']);
 unset($_SESSION['lastname']);
 unset($_SESSION['profile']);
 unset($_SESSION['phone']);
-include "../config.php";
+// include "..\\admin\\config.php";
+include "C:\\xampp\\htdocs\\HBNB-HOTELS-SYSTEM\\admin\\config.php";
+ 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $state = $_GET['state'];
+    $state = isset($_GET['state']);
     if ($state) {
         header("Location: ../user/activities.php");
     } else {
@@ -23,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->rowCount() > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $firstname = $row['FIRST_NAME'];
+            // echo $row['FIRST_NAME']; exit;
             $lastname = $row['LAST_NAME'];
             $email = $row['EMAIL'];
             $phone = $row['PHONE'];
@@ -34,10 +38,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 var_dump($row['PROFILE']);
                 $_SESSION['profile'] = $row['PROFILE'];
             }
-
-            // $redirectUrl = "../../index.php?firstname=$firstname&lastname=$lastname&email=$email&phone=$phone";
-            // $hashedUrl = hash('sha256', $redirectUrl);
+            
             header("Location: ../../index.php");
+        } else {
+            $_SESSION['login_error'] = "Invalid email or password";
+            header("Location: ../../index.php?locate_login=loginmodal");
         }
     }
+} else {
+    echo "No";
 }
