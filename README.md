@@ -55,6 +55,8 @@ HBNB (HomeAway, Airbnb) Project is a web application for managing and booking re
     ![User landing page](readme_img/user%20landing%20page.png)<br><br>
     - The admin landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM/admin/admin_page.php```<br><br>
     ![Admin landing page](readme_img/user%20landing%20page.png)<br><br>
+    - The mail service $mailPassword is your special password for your gmail (it's allowed to send emails from your idea)
+        - Create a file mailPassword.php in the root folder
     
 
 You're good to go 🎉
