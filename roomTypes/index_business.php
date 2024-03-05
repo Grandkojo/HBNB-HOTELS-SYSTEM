@@ -1,11 +1,11 @@
 <!-- BUSINESS -->
 <?php
         $sql = "SELECT * FROM room WHERE CATEGORY = 'BUSINESS' AND ROOM_STATUS = '0'";
-        // var_dump($sql); exit;
+        
         $display_query = $conn->prepare($sql);
         $display_query->execute();
         $result = $display_query->fetchAll(PDO::FETCH_ASSOC);
-        // var_dump($result); exit;
+        
         ?>
         <?php
         $sql1 = "SELECT ICON, NAME FROM hbnb_utilities WHERE CATEGORY IN ('STANDARD/BUSINESS/LUXURY', 'BUSINESS/LUXURY')";

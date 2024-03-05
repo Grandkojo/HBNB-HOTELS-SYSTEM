@@ -1,25 +1,3 @@
-<!-- SEARCH -->
-<?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $search = $_POST['search'];
-        // var_dump($search); exit;
-        $sql = "SELECT* FROM room WHERE NAME LIKE :search OR LOCATION LIKE :search";
-        $stmt = $conn->prepare($sql);
-        $searchParam = '%' . $search . '%';
-        $stmt->bindParam(':search', $searchParam);
-        $stmt->execute();
-        $residence = $stmt->fetchAll(PDO::FETCH_ASSOC);
-     
-    }
-
-    //Altering table for a new column
-    // $query = "ALTER TABLE room ADD COLUMN ROOM_STATUS ENUM('0', '1') NOT NULL DEFAULT '0' AFTER LOCATION";
-    // $query1 = $conn->prepare($query);
-    // $query1->execute();
-    // if ($query1->execute()) {
-    //     echo "Table altered";
-    // }
-?>
 <!-- STANDARD -->
 <?php
     $sql = "SELECT * FROM room WHERE CATEGORY = 'STANDARD' AND ROOM_STATUS = '0'";

@@ -295,7 +295,6 @@
 
 
                     <div class="modal-body"><strong>
-                            <!-- <p style="font-size: 20px;"><?php echo ucwords(strtolower($_SESSION['firstname']))  . " " . ucfirst(strtolower($_SESSION['lastname'])) ?></p> -->
                         </strong>
                         <div class="mb-3">
                             <label for="profile_image">Profile image (optional)</label>

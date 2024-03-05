@@ -1,6 +1,6 @@
 # HBNB Project
 
-![HBNB Logo](hbnb_logo.png)
+![HBNB Logo](readme_img/hbnb_logo.png)
 
 ## Table of Contents
 
@@ -11,11 +11,16 @@
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
+- [Bugs](#bugs)
+- [Copyright](#copyright)
 - [License](#license)
 
 ## Introduction
 
-HBNB (HomeAway, Airbnb) Project is a web application for managing and booking rental properties. This project aims to provide a platform where users can explore, list, and book accommodations for short-term stays.
+HBNB (HomeAway, Airbnb) Project is a web application for managing and booking rental properties. This project aims to provide a platform where users can explore, list, and book accommodations for short-term stays. <br>
+- Check out our landing page: [https://grandkojo.github.io/HBNB-HOTELS-SYSTEM](https://grandkojo.github.io/HBNB-HOTELS-SYSTEM) <br>
+
 
 ## Features
 
@@ -46,7 +51,13 @@ HBNB (HomeAway, Airbnb) Project is a web application for managing and booking re
     cd admin/config.php
 
 4. **Important:**
-    - The landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM```
+    - The landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM/index.php```<br><br>
+    ![User landing page](readme_img/user%20landing%20page.png)<br><br>
+    - The admin landing page: ```localhost/HBNB-HOTELS-MANAGEMENT-SYSTEM/admin/admin_page.php```<br><br>
+    ![Admin landing page](readme_img/user%20landing%20page.png)<br><br>
+    - The mail service $mailPassword is your special password for your gmail (it's allowed to send emails from your idea)
+        - Create a file mailPassword.php in the root folder
+    
 
 You're good to go 🎉
 
@@ -88,6 +99,14 @@ HBNB-HOTELS-MANAGEMENT-SYSTEM/<br>
 
 Contributions are welcome 😊! 
 Please follow the [contribution guidelines](CONTRIBUTING.md)
+
+## Contributors
+[Essien Ernest Kojo](https://github.com/Grandkojo)<br>
+[Lynn Kamau](https://github.com/LynnKamau)
+
+## Copyright
+The logo <img src="readme_img/hbnb_logo.png" alt="HBNB logo" width="75" height="60" margin-top="15"> was from ©[ALX](https://www.alxafrica.com/)<br>
+All credits due 😊.
 
 ## License
 
